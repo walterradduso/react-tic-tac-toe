@@ -34,4 +34,4 @@ y ya podemos jugar al tic-tac-toe.
 <br>
 
 #### Redes
-[![Twitch](https://icongr.am/fontawesome/twitch.svg?size=32&color=70c8ff)](https://twitter.com/CodigoDeMarras)[![Twitter](https://icongr.am/fontawesome/twitter.svg?size=32&color=70c8ff)](https://twitter.com/CodigoDeMarras)[![YouTube](https://icongr.am/fontawesome/youtube.svg?size=32&color=70c8ff)](https://youtube.com/@codigodemarras)
+[![Twitch](https://icongr.am/fontawesome/twitch.svg?size=32&color=70c8ff)](https://www.twitch.tv/codigodemarras)[![Twitter](https://icongr.am/fontawesome/twitter.svg?size=32&color=70c8ff)](https://twitter.com/CodigoDeMarras)[![YouTube](https://icongr.am/fontawesome/youtube.svg?size=32&color=70c8ff)](https://youtube.com/@codigodemarras)
