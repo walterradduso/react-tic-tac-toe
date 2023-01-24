@@ -43,6 +43,8 @@ function App() {
     const winner = checkWinner(newBoard)
 
     if (winner) {
+      console.log('Winner: ', turn)
+
       cleanBoard()
     }
   }
