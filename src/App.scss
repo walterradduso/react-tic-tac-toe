@@ -1,0 +1,47 @@
+.App {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 300px;
+    width: 300px;
+
+    .square {
+      align-items: center;
+      border: 1px solid #fff;
+      cursor: pointer;
+      display: flex;
+      height: 100px;
+      justify-content: center;
+      width: 32%;
+      font-size: 4rem;
+      
+      &:nth-child(-n + 3) {
+        border-top: none;
+      }
+
+      &:nth-child(3n) {
+        border-right: none;
+      }
+
+      &:nth-child(3n - 2) {
+        border-left: none;
+      }
+
+      &:nth-child(n + 7) {
+        border-bottom: none;
+      }
+    }
+  }
+}
