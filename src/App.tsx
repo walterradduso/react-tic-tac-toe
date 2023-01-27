@@ -1,52 +1,30 @@
 import { useState } from 'react'
 
-import { TURNS, WINNING_MATCHES } from './constants'
+import { TURNS } from './constants'
 import './App.scss'
-
-interface ISquareHandlerProps {
-  position: number
-}
+import BoardActions from './components/BoardActions'
+import ModalContainer from './components/ModalContainer'
+import Board from './components/Board'
 
 function App() {
   const [board, setBoard] = useState(Array(9).fill(''))
   const [turn, setTurn] = useState(TURNS.X)
+  const [winner, setWinner] = useState<string | null>(null)
+  const [draw, setDraw] = useState<boolean>(false)
+  const [showModal, setShowModal] = useState<boolean>(false)
+  const [xWinners, setXWinners] = useState<number>(0)
+  const [oWinners, setOWinners] = useState<number>(0)
 
   const cleanBoard = () => {
     setBoard(Array(9).fill(''))
     setTurn(TURNS.X)
   }
 
-  const checkWinner = (newBoard: any) => {
-    for (const combo of WINNING_MATCHES) {
-      const [a, b, c] = combo
-
-      if (newBoard[a] && newBoard[a] === newBoard[b] && newBoard[a] === newBoard[c]) {
-        return newBoard[a]
-      }
-    }
-
-    return null
-  }
-
-  const squareClickHandler = ({ position }: ISquareHandlerProps): void => {
-    if (board[position]) {
-      return
-    }
-
-    const newBoard = [...board]
-
-    newBoard[position] = turn
-
-    setBoard(newBoard)
-    setTurn(turn === TURNS.X ? TURNS.O : TURNS.X)
-
-    const winner = checkWinner(newBoard)
-
-    if (winner) {
-      console.log('Winner: ', turn)
-
-      cleanBoard()
-    }
+  const restartGame = (): void => {
+    setWinner(null)
+    setDraw(false)
+    setShowModal(false)
+    cleanBoard()
   }
 
   return (
@@ -56,21 +34,39 @@ function App() {
         TA-TE-TI 🇦🇷 <br />
         TRIQUI 🇨🇴 <br />
         TRES EN RAYA 🇪🇸 <br />
+        GATO 🇲🇽 <br />
       </h1>
 
-      <div className="board">
-        {board.map((square, i) => {
-          return (
-            <div
-              key={`square-${i}`}
-              className="square"
-              onClick={() => squareClickHandler({ position: i })}
-            >
-              {square}
-            </div>
-          )
-        })}
-      </div>
+      <Board
+        board={board}
+        oWinners={oWinners}
+        setBoard={setBoard}
+        setDraw={setDraw}
+        setOWinners={setOWinners}
+        setShowModal={setShowModal}
+        setTurn={setTurn}
+        setWinner={setWinner}
+        setXWinners={setXWinners}
+        turn={turn}
+        winner={winner}
+        xWinners={xWinners}
+      />
+
+      <ModalContainer
+        draw={draw}
+        restartGame={restartGame}
+        setShowModal={setShowModal}
+        showModal={showModal}
+        winner={winner}
+      />
+
+      <BoardActions
+        draw={draw}
+        oWinners={oWinners}
+        restartGame={restartGame}
+        winner={winner}
+        xWinners={xWinners}
+      />
     </div>
   )
 }
