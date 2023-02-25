@@ -1,6 +1,8 @@
 import { ReactElement } from 'react'
 import { clsx } from 'clsx'
 
+import './styles.scss'
+
 interface IModalContainerProps {
   draw: boolean
   restartGame: () => void

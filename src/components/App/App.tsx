@@ -1,10 +1,11 @@
 import { useState } from 'react'
 
-import { TURNS } from './constants'
-import './App.scss'
-import BoardActions from './components/BoardActions'
-import ModalContainer from './components/ModalContainer'
-import Board from './components/Board'
+import { TURNS } from '../../constants'
+import { BoardActions } from '../../components/BoardActions'
+import { ModalContainer } from '../../components/ModalContainer'
+import { Board } from '../../components/Board'
+
+import './styles.scss'
 
 function App() {
   const [board, setBoard] = useState(Array(9).fill(''))

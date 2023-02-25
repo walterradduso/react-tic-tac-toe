@@ -1,0 +1,70 @@
+.modal-container {
+  .modal-bg {
+    background-color: #333;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100vw;
+  }
+
+  .modal-winner {
+    align-items: center;
+    background-color: #3F0071;
+    border-radius: 6px;
+    border: 1px solid #FB2576;
+    bottom: 0;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: center;
+    left: calc(50% - 200px);
+    position: absolute;
+    right: 0;
+    top: calc(50% - 100px);
+    width: 400px;
+
+    .winner-message {
+      font-size: 2em;
+      font-weight: 700;
+    }
+
+    .restart-button {
+      background-color: #FB2576;
+      color: #fafafa;
+      border: none;
+      font-weight: 700;
+
+      &:focus,
+      &:hover {
+        border: none;
+        outline: 0;
+      }
+    }
+  
+    .close-button {
+      background-color: transparent;
+      border: none;
+      outline: 0;
+      padding: 5px 10px;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      &:focus,
+      &:hover {
+        border: none;
+        outline: 0;
+      }
+    }
+  }
+
+  &.modal-container-hide {
+    display: none;
+  }
+}
+

@@ -1,0 +1,44 @@
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 300px;
+  width: 300px;
+
+  .square {
+    align-items: center;
+    border: 1px solid #FB2576;
+    cursor: pointer;
+    display: flex;
+    font-size: 4rem;
+    height: 100px;
+    justify-content: center;
+    width: 32%;
+    
+    &:nth-child(-n + 3) {
+      border-top: none;
+    }
+
+    &:nth-child(3n) {
+      border-right: none;
+    }
+
+    &:nth-child(3n - 2) {
+      border-left: none;
+    }
+
+    &:nth-child(n + 7) {
+      border-bottom: none;
+    }
+
+    &.hoverX:empty:hover::before {
+      content: 'X';
+      opacity: 0.5;
+    }
+
+    &.hoverO:empty:hover::before {
+      content: 'O';
+      opacity: 0.5;
+    }
+  }
+}

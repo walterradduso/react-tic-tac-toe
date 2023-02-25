@@ -1,7 +1,10 @@
 import { ReactElement } from 'react'
+import { clsx } from 'clsx'
 
-import { checkWinner } from '../utils/checkWinner'
-import { TURNS } from '../constants'
+import { checkWinner } from '../../utils/checkWinner'
+import { TURNS } from '../../constants'
+
+import './styles.scss'
 
 interface IPosition {
   position: number
@@ -22,7 +25,7 @@ interface IBoardProps {
   xWinners: number
 }
 
-const Board = ({
+function Board({
   board,
   oWinners,
   setBoard,
@@ -35,7 +38,7 @@ const Board = ({
   turn,
   winner,
   xWinners,
-}: IBoardProps): ReactElement => {
+}: IBoardProps): ReactElement {
   const squareClickHandler = ({ position }: IPosition): void => {
     if (board[position]) {
       return
@@ -59,6 +62,8 @@ const Board = ({
       } else {
         setOWinners(oWinners + 1)
       }
+
+      return
     }
 
     const itsDraw = newBoard.every(board => board !== '')
@@ -69,13 +74,18 @@ const Board = ({
     }
   }
 
+  const squareStyles = clsx('square', {
+    hoverX: turn === TURNS.X,
+    hoverO: turn === TURNS.O,
+  })
+
   return (
     <div className="board">
       {board.map((square, i) => {
         return (
           <div
             key={`square-${i}`}
-            className="square"
+            className={squareStyles}
             onClick={() => {
               if (!winner) {
                 squareClickHandler({ position: i })

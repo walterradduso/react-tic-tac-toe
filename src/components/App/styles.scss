@@ -1,0 +1,12 @@
+.App {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+}
