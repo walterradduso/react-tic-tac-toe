@@ -2,43 +2,14 @@
 
 ---
 
-### Ta Te Ti / Triqui / Tres en Raya / Gato
-### Tic Tac Toe
-
----
-
-### Iniciar Proyecto
-
-* Clonar el proyecto
-* Instalar dependencias
-  ```
-  npm install
-  ```
-* Levantar proyecto
-  ```
-  npm run dev
-  ```
-* Jugar
-
-### Descripción
-
-Es un pequeño juego en el cual gana el primero en poner tres marcas en línea, usualmente círculos y cruces, dentro de una cuadrícula de tres casillas de ancho por tres de alto.
-
-Este proyecto es el segundo proyecto de una serie de proyectos con React.
-Fue desarrollado en vivo en el [stream](https://www.twitch.tv/codigodemarras).
-
-La idea des estos proyectos es ir realizando proyectos que vayan incrementando su dificultad, desde un tic-tac-toe, pasando por un memory game, un sudoku y agregando más complejidad proyecto a proyecto...
-
----
-
 ### Init Project
 
-* Clone the projecto
+* Clone project
 * Install dependencies
   ```
   npm install
   ```
-* Start the project
+* Start project
   ```
   npm run dev
   ```
@@ -46,12 +17,26 @@ La idea des estos proyectos es ir realizando proyectos que vayan incrementando s
 
 ### Description
 
-It is a small game in which the first to place three marks in a line, usually circles and crosses, within a grid three squares wide by three squares high, wins.
+Experience the classic game of Tic Tac Toe in a new way with this game built with React and TypeScript. Two players take turns placing their marks, usually X's and O's, in a grid of three squares wide by three squares high. The goal is to be the first to place three marks in a line, either horizontally, vertically, or diagonally. With a simple interface and rules.
 
-This project is the second project from a serie of projecs with React.
-It was developed live in the [stream](https://www.twitch.tv/codigodemarras).
+---
 
-The idea of these projects is to make projects of increasing difficulty, from a tic-tac-toe, through a memory game, a sudoku and adding more complexity one project at a time...
+### Iniciar Proyecto
+
+* Clonar proyecto
+* Instalar dependencias
+  ```
+  npm install
+  ```
+* Iniciar proyecto
+  ```
+  npm run dev
+  ```
+* Jugar
+
+### Descripción
+
+Experimenta el clásico juego del tres en raya de una forma nueva con este juego construido con React y TypeScript. Dos jugadores se turnan para colocar sus marcas, normalmente X y O, en una cuadrícula de tres cuadrados de ancho por tres de alto. El objetivo es ser el primero en colocar tres marcas en línea, ya sea horizontal, vertical o diagonalmente. Con una interfaz y reglas sencillas.
 
 ---
 
@@ -85,19 +70,16 @@ v18.13.0.
 
 ---
 
-### Redes / Networks
+### Networks / Redes
 
 <div id="badges">
-  <a href="http://twitch.codigodemarras.com/" target="_blanck">
-    <img src="https://img.shields.io/badge/twitch-6441a5?style=for-the-badge&logo=twitch&logoColor=FFFFFF" alt="Website Badge"/>
+  <a href="https://walterradduso.dev/" target="_blank">
+    <img src="https://img.shields.io/badge/website-8a0606?style=for-the-badge&logo=About.me&logoColor=FFFFFF" alt="Website Badge"/>
   </a>
-  <a href="http://twitter.codigodemarras.com/" target="_blanck">
+  <a href="https://linkedin.walterradduso.com/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=FFFFFF" alt="LinkedIn Badge"/>
+  </a>
+  <a href="https://twitter.com/walterradduso" target="_blank">
     <img src="https://img.shields.io/badge/twitter-00acee?style=for-the-badge&logo=twitter&logoColor=FFFFFF" alt="Website Badge"/>
-  </a>
-  <a href="http://youtube.codigodemarras.com/" target="_blanck">
-    <img src="https://img.shields.io/badge/youtube-c4302b?style=for-the-badge&logo=youtube&logoColor=FFFFFF" alt="Website Badge"/>
-  </a>
-  <a href="http://discord.codigodemarras.com/" target="_blanck">
-    <img src="https://img.shields.io/badge/discord-36393e?style=for-the-badge&logo=discord&logoColor=FFFFFF" alt="Website Badge"/>
   </a>
 </div>
