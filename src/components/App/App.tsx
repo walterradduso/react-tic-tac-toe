@@ -1,11 +1,12 @@
 import { useState } from 'react'
 
-import { TURNS } from '../../constants'
+import { Board } from '../../components/Board'
 import { BoardActions } from '../../components/BoardActions'
 import { ModalContainer } from '../../components/ModalContainer'
-import { Board } from '../../components/Board'
+import { TURNS } from '../../constants'
 
 import './styles.scss'
+import { Footer } from '../Footer'
 
 function App() {
   const [board, setBoard] = useState(Array(9).fill(''))
@@ -29,7 +30,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <main className="App">
       <h1 className="title">
         TIC-TAC-TOE 🇺🇸 <br />
         TA-TE-TI 🇦🇷 <br />
@@ -53,22 +54,12 @@ function App() {
         xWinners={xWinners}
       />
 
-      <ModalContainer
-        draw={draw}
-        restartGame={restartGame}
-        setShowModal={setShowModal}
-        showModal={showModal}
-        winner={winner}
-      />
+      <ModalContainer draw={draw} restartGame={restartGame} setShowModal={setShowModal} showModal={showModal} winner={winner} />
 
-      <BoardActions
-        draw={draw}
-        oWinners={oWinners}
-        restartGame={restartGame}
-        winner={winner}
-        xWinners={xWinners}
-      />
-    </div>
+      <BoardActions draw={draw} oWinners={oWinners} restartGame={restartGame} winner={winner} xWinners={xWinners} />
+
+      <Footer />
+    </main>
   )
 }
 
