@@ -50,7 +50,7 @@ Experimenta el clásico juego del tres en raya de una forma nueva con este juego
 
 #### Node Version
 ```
-v18.13.0.
+v18.16.0.
 ```
 
 ---
